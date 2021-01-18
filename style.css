@@ -1,0 +1,4 @@
+/* Apply border-style to entire page  */
+* {
+  border-style: border-box;
+}
