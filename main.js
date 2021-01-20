@@ -4,7 +4,7 @@
 var startButton = document.getElementById('start-button');
 var startCard = document.getElementById('start-card');
 
-// var timer = 120 -seconds- (120000 -ms-)
+// var timer = 60 -seconds- (60000 -ms-)
 // timer--
 // var index = 0
 
@@ -16,10 +16,33 @@ function displayNone () {
     startCard.style.visibility = 'hidden';
 }
 
-//create function to also start timer countdown upon click event
-function startTimer () {
+// start timer
+// create function to also start timer countdown upon click event
+function startTimer (duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
 }
+
+window.onload = function () {
+    var oneMinute = 60 * 5,
+        display = document.querySelector('#time');
+    startTimer(oneMinute, display);
+};
+// when timer runs out, quiz will end
+// user brought to high scores div (prompt)
+// may enter string, local storage saves entry with associated score
 
 // start timer
 
@@ -55,3 +78,6 @@ function startTimer () {
 // if incorrect, next question, decrement time from timer (maybe 10-15 seconds)
 
 // if statement for stop timer. timer = 0 --> end quiz
+
+// user can reset highscores
+// user can take quiz again
