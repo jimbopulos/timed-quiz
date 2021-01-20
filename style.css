@@ -10,3 +10,7 @@
   border: solid #0f6efd 5px;
   border-radius: 6px;
 }
+
+.clock {
+  float: right;
+}
