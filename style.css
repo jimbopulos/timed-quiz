@@ -1,4 +1,10 @@
 /* Apply border-style to entire page  */
 * {
-  border-style: border-box;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
 }
