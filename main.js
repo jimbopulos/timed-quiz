@@ -9,14 +9,23 @@ var startCard = document.getElementById('start-card');
 // var index = 0
 
 // start button eventListener to hide div element
-startButton.addEventListener('click', displayNone);
+// startButton.addEventListener('click', displayNone);
 // start button eventListener to start timer
 // startButton.addEventListener('click', startTimer);
 
+startButton.addEventListener('click', function () {
+    displayNone();
+    var oneMinute = 60 * 1;
+    var display = document.querySelector('#time');
+    startTimer(oneMinute, display);
+});
 // create function to make start-card disappear upon click event
 function displayNone () {
     startCard.style.visibility = 'hidden';
 }
+
+// handle start
+
 
 // start timer
 // create function to also start timer countdown upon click event
@@ -37,11 +46,11 @@ function startTimer (duration, display) {
     }, 1000);
 }
 
-window.onload = function () {
-    var oneMinute = 60 * 1,
-        display = document.querySelector('#time');
-    startTimer(oneMinute, display);
-};
+// window.onload = function () {
+//     var oneMinute = 60 * 1,
+//         display = document.querySelector('#time');
+//     startTimer(oneMinute, display);
+// };
 // when timer runs out, quiz will end
 // user brought to high scores div (prompt)
 // may enter string, local storage saves entry with associated score
