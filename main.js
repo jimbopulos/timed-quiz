@@ -10,6 +10,7 @@ var startButton = document.getElementById('start-card');
 // start button evenListener to hide div element
 startButton.addEventListener('click', displayNone);
 
+
 // start timer
 
 // function showStuff(id, text, btn) {
