@@ -9,11 +9,16 @@ var startCard = document.getElementById('start-card');
 // var index = 0
 
 // start button evenListener to hide div element
-startButton.addEventListener('click', displayNone);
+startButton.addEventListener('click', displayNone, startTimer);
 
 // create function to make start-card disappear upon click event
 function displayNone () {
     startCard.style.visibility = 'hidden';
+}
+
+//create function to also start timer countdown upon click event
+function startTimer () {
+
 }
 
 // start timer
