@@ -7,7 +7,10 @@ var startButton = document.getElementById('start-card');
 // timer--
 // var index = 0
 
-// start button evenListener to hide div element, also start timer
+// start button evenListener to hide div element
+startButton.addEventListener('click', displayNone);
+
+// start timer
 
 // function showStuff(id, text, btn) {
 //     document.getElementById(id).style.display = 'block';
