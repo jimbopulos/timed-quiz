@@ -1,7 +1,8 @@
 // eventListener, click event to hide inital start --> display first question
 
 // declare globals
-var startButton = document.getElementById('start-card');
+var startButton = document.getElementById('start-button');
+var startCard = document.getElementById('start-card');
 
 // var timer = 120 -seconds- (120000 -ms-)
 // timer--
@@ -10,6 +11,10 @@ var startButton = document.getElementById('start-card');
 // start button evenListener to hide div element
 startButton.addEventListener('click', displayNone);
 
+// create function to make start-card disappear upon click event
+function displayNone () {
+    startCard.style.visibility = 'hidden';
+}
 
 // start timer
 
