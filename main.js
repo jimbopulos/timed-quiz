@@ -1,12 +1,15 @@
 // eventListener, click event to hide inital start --> display first question
 
 // declare globals
+var startButton = document.getElementById('start-card');
 
 // var timer = 120 -seconds- (120000 -ms-)
 // timer--
 // var index = 0
 
 // start button evenListener to hide div element, also start timer
+startButton.addEventListener('displayNone')
+
 // function showStuff(id, text, btn) {
 //     document.getElementById(id).style.display = 'block';
 //     // hide the lorem ipsum text
