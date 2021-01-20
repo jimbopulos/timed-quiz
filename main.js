@@ -12,7 +12,8 @@ var startCard = document.getElementById('start');
 // startButton.addEventListener('click', startTimer);
 
 startButton.addEventListener('click', function () {
-    displayNone();
+    // displayNone();
+    // add function to move along carousel
     var oneMinute = 60 * 1;
     var display = document.querySelector('#time');
     startTimer(oneMinute, display);
