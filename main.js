@@ -71,6 +71,9 @@ window.onload = function () {
 //     }
 //     ]
 
+// object for correct answers to pull from (as array)
+// object for incorrect answers to pull from (as array)
+
 // click event for each option
 // classes for correct, incorrect
 // link data attributes
