@@ -11,7 +11,7 @@ var startCard = document.getElementById('start-card');
 // start button eventListener to hide div element
 startButton.addEventListener('click', displayNone);
 // start button eventListener to start timer
-startButton.addEventListener('click', startTimer);
+// startButton.addEventListener('click', startTimer);
 
 // create function to make start-card disappear upon click event
 function displayNone () {
@@ -37,7 +37,7 @@ function startTimer (duration, display) {
     }, 1000);
 }
 
-window.click = function () {
+window.onload = function () {
     var oneMinute = 60 * 1,
         display = document.querySelector('#time');
     startTimer(oneMinute, display);
