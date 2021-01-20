@@ -3,6 +3,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: linear-gradient(lemonchiffon, pink);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 #start {
   width: 40%;
   margin: auto;
@@ -10,6 +16,7 @@
   border: solid #0f6efd 3px;
   border-radius: 6px;
   padding: 100px;
+  background-color: skyblue;
 }
 
 .clock {
