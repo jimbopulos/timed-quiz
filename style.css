@@ -20,6 +20,10 @@ body {
   box-shadow: 3px 2px 3px black;
 }
 
+#start-button {
+  border: 3px solid mistyrose;
+}
+
 .quiz-box {
   width: 40%;
   margin: auto;
@@ -39,9 +43,17 @@ body {
 
 .option {
   background: mintcream;
-  border: 1px solid mistyrose;
-  border-radius: 3px;
+  border: 3px solid mistyrose;
+  border-radius: 5px;
   padding: 6px 8px;
+  justify-content: space-between;
+  margin-bottom: 17px;
+}
+
+.option:hover {
+  color: mintcream;
+  background: #0f6efd;
+  cursor: pointer;
 }
 
 .clock {
