@@ -6,6 +6,8 @@ Starting the quiz also sets off a timer, which will count down over the course o
 
 After they complete the quiz, users will be prompted with a Highscores window in which they may enter a name to the scoreboard containing their relative score. If a user would like to check the Highscores leaderboard, they can do so via the 'View Highscores' button located in the top left corner of the page. The scoreboard remembers previous scores, and provides an option to clear the leaderboard to make room for newer highscores.
 
-![Screenshot of code-quiz intial page with START button and timer.](images/Code-quiz.png)
+![Screenshot of code-quiz intial page with START button and timer.](images/Start-quiz.png)
+
+![Screenshot of code-quiz first question page with options and timer begin](images/Code-quiz.png)
 
 Test your knowledge [here!](https://jimbopulos.github.io/timed-quiz/)
