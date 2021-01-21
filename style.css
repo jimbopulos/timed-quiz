@@ -31,6 +31,19 @@ body {
   box-shadow: 3px 2px 3px black;
 }
 
+.quest-text {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 15px;
+}
+
+.option {
+  background: mintcream;
+  border: 1px solid mistyrose;
+  border-radius: 3px;
+  padding: 6px 8px;
+}
+
 .clock {
   background-color: #0f6efd;
   color: white;
