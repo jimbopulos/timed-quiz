@@ -1,6 +1,7 @@
 // declare globals
 var startButton = document.getElementById('start-button');
 var startCard = document.getElementById('start');
+var questBox = document.querySelector('.questionbox');
 
 // array of object for question set
 // quiz object to hold: questions, and possible answers (options) 
@@ -39,6 +40,7 @@ var questionCards = [
 startButton.addEventListener('click', function () {
     // displayNone();
     // add function to move along carousel
+
     var oneMinute = 60 * 1;
     var display = document.querySelector('#time');
     startTimer(oneMinute, display);
