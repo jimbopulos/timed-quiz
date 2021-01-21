@@ -30,11 +30,6 @@ body {
   color: black;
 }
 
-#highscores-button:hover {
-  background: mintcream;
-  color: black;
-}
-
 .quiz-box {
   width: 40%;
   margin: auto;
@@ -76,4 +71,8 @@ body {
   margin: 0 auto;
   width: 8%;
   text-align: center;
+}
+
+.hidden {
+  display: none;
 }
