@@ -3,7 +3,7 @@ var question = document.querySelector('.quest-text');
 var choices = Array.from(document.querySelectorAll('.option'));
 
 let currentQuestion = {};
-let correctAmswer = true;
+let correctAnswer = true;
 let score = 0;
 
 // array of object for question set
@@ -70,5 +70,11 @@ function startQuiz() {
 
 // function for nextQuestion since called
 function nextQuestion() {
-
+    if (availQuestions.length = 0 || questionCounter > maxQuestions) {
+        localStorage.setItem('prevScore', score);
+        return 
+    } 
 }
+
+// this is all that I made it up to...
+// BETTER LUCK NEXT TIME ~~~~
