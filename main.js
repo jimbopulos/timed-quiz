@@ -4,8 +4,6 @@ var startCard = document.getElementById('start');
 
 // array of object for question set
 // quiz object to hold: questions, and possible answers (options) 
-
-
 var questionCards = [
     {
     firstQuestion: 'What does the acronym HTML stand for?',
