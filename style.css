@@ -20,11 +20,17 @@ body {
   box-shadow: 3px 2px 3px black;
 }
 
-#start-button {
+#start-button,
+.nav-item {
   border: 3px solid mistyrose;
 }
 
 #start-button:hover {
+  background: mintcream;
+  color: black;
+}
+
+#nav-item:hover {
   background: mintcream;
   color: black;
 }
