@@ -9,7 +9,7 @@ var startCard = document.getElementById('start');
 var questionCards = [
     {
     firstQuestion: 'What does the acronym HTML stand for?',
-    answers: ['Hyper Tilt Makes Laws', 'Hyper Text Makeup Language', 'Hyper Text Markup Language', 'How To Make Latkes'],
+    answers: ['Helicopter Tilt Makes Laws', 'Hyper Text Makeup Language', 'Hyper Text Markup Language', 'How To Make Latkes'],
     correctAnswer: 'Hyper Text Markup Language'
     },
     {
