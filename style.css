@@ -20,5 +20,12 @@ body {
 }
 
 .clock {
-  float: right;
+  background-color: #0f6efd;
+  color: white;
+  border-radius: 6px;
+  padding: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  width: 8%;
+  text-align: center;
 }
