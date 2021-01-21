@@ -1,3 +1,12 @@
+// declare
+var question = document.querySelector('.quest-text');
+var choices = Array.from(document.querySelectorAll('.option'));
+
+let currentQuestion = {};
+let correctAmswer = true;
+let score = 0;
+
+
 // create function to also start timer countdown upon click event
 function startTimer (duration, display) {
     var timer = duration, minutes, seconds;
