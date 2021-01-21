@@ -1,5 +1,6 @@
 // declare
-var question = document.querySelector('.quest-text')
+var question = document.querySelector('.quest-text');
+var choices = Array.from(document.querySelectorAll('.option'));
 
 
 // create function to also start timer countdown upon click event
