@@ -31,6 +31,11 @@ var questionCards = [
     }
     ];
 
+// declare score for each question answered correctly
+// max # questions
+var questPoints = 100;
+var maxQuestions = 4;
+
 // create function to also start timer countdown upon click event
 function startTimer (duration, display) {
     var timer = duration, minutes, seconds;
@@ -54,3 +59,16 @@ window.onload = function () {
         display = document.querySelector('#time');
     startTimer(oneMinute, display);
 };
+
+// create function to begin quiz
+function startQuiz() {
+    questionCounter = 0;
+    score = 0;
+    availQuestions = [];
+    nextQuestion();
+}
+
+// function for nextQuestion since called
+function nextQuestion() {
+
+}
