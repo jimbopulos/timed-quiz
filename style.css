@@ -24,6 +24,11 @@ body {
   border: 3px solid mistyrose;
 }
 
+#start-button:hover {
+  background: mintcream;
+  color: black;
+}
+
 .quiz-box {
   width: 40%;
   margin: auto;
