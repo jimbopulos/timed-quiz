@@ -10,4 +10,4 @@ After they complete the quiz, users will be prompted with a Highscores window in
 
 ![Screenshot of code-quiz first question page with options and timer begin](images/Code-quiz.png)
 
-Test your knowledge [here!](https://jimbopulos.github.io/timed-quiz/)
+**Test your knowledge [here!](https://jimbopulos.github.io/timed-quiz/)**
