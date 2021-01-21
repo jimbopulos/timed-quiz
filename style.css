@@ -17,6 +17,7 @@ body {
   border-radius: 6px;
   padding: 100px;
   background-color: skyblue;
+  box-shadow: 3px 2px 3px black;
 }
 
 .quiz-box {
