@@ -1,6 +1,6 @@
 // declare globals
 var startButton = document.getElementById('start-button');
-var startCard = document.getElementById('start');
+var startQuiz = document.getElementById('start');
 var questBox = document.querySelector('.questionbox');
 
 // array of object for question set
@@ -37,6 +37,12 @@ var questionCards = [
 // start button eventListener to start timer
 // startButton.addEventListener('click', startTimer);
 
+// function for moving along carousel (to question boxes)
+function  () {
+
+}
+
+
 startButton.addEventListener('click', function () {
     // displayNone();
     // add function to move along carousel
@@ -48,9 +54,9 @@ startButton.addEventListener('click', function () {
 
 // eventListener, click event to hide inital start --> display first question
 // create function to make start-card disappear upon click event
-function displayNone () {
-    startCard.style.visibility = 'hidden';
-}
+// function displayNone () {
+//     startCard.style.visibility = 'hidden';
+// }
 
 // handle start
 
