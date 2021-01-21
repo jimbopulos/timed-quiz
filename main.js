@@ -1,7 +1,7 @@
 // declare globals
 var startButton = document.getElementById('start-button');
 var startQuiz = document.getElementById('start');
-var questBox = document.querySelector('.questionbox');
+// var questBox = document.querySelector('.questionbox');
 
 // array of object for question set
 // quiz object to hold: questions, and possible answers (options) 

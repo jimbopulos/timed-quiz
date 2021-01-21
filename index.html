@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Gave page a proper title -->
-    <title>Timed Code Quiz</title>
+    <title>Timed Code Quiz Start</title>
 
     <!-- Added bootstrap source code -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -14,8 +14,8 @@
 <!-- Navbar to go to highscores -->
 <body>
     <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">View Highscores</a>
+        <li class="nav-item" id="highscores-button">
+          <a class="nav-link active" aria-current="page" href="highscores.html">View Highscores</a>
         </li>
     </ul>
         <!-- Added timer to navbar -->
@@ -23,18 +23,15 @@
     
         <!-- Div with id=start -->
         <!-- start button/intro text -->
-        <div id="start">
-            <div class="wrapper">
+        <div class="wrapper" id="start">
             <h3>Coding Quiz</h3>
             <h4>Click the start button to begin...</h4>
             <br>
-              <div class="questionbox" aria-role="question-text" aria-label="carousel">
-                <button class="btn btn-primary" id="start-button">START</button>
+              <div class="start-box" aria-role="start-text" aria-label="carousel">
+                <a href="quiz.html" class="btn btn-primary" id="start-button">START</a>
               </div> 
             </div>
          </div>
-                <!-- Div for questions, text -->
-                <!-- id = question -->
                 <!-- data-attributes -->
         </div>
 
