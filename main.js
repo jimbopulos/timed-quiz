@@ -2,6 +2,33 @@
 var startButton = document.getElementById('start-button');
 var startCard = document.getElementById('start');
 
+// array of object for question set
+// quiz object to hold: questions, and possible answers (options) 
+
+
+var questionCards = [
+    {
+    firstQuestion: 'What does the acronym HTML stand for?',
+    answers: ['Hyper Tilt Makes Laws', 'Hyper Text Makeup Language', 'Hyper Text Markup Language', 'How To Make Latkes'],
+    correctAnswer: 'Hyper Text Markup Language'
+    },
+    {
+    secondQuestion: 'What does the acronym CSS stand for?',
+    answers: ['Cascading Silly String', 'Cascading Style Sheets', 'Cats Scratching Scarves', 'Cascading Style Sleet'],
+    correctAnswer: 'Cascading Style Sheets'
+    },
+    {
+    thirdQuestion: 'What is the syntax for linking our JavaScript (script.js) to our HTML, and where do we place in the HTML code?',
+    answers: ['<script link=script.js></script>, bottom element of the body', '<shrimp src=shrimp.js></>, first element of the body', '<script src=script.js></script>, bottom element of the body', '<script src=main.js></script>, bottom element of the body'],
+    correctAnswer: '<script src=script.js></script>, bottom element of the body'
+    },
+    {
+    fourthQuestion: 'Which of the following uses the proper casing to declare a variable?',
+    answers: ['var codingQuiz', 'var coding-quiz', 'var CodingQuiz', 'var coding Quiz'],
+    correctAnswer: 'var codingQuiz'
+    }
+    ];
+
 // var timer = 60 -seconds- (60000 -ms-)
 // timer--
 // var index = 0
@@ -65,21 +92,6 @@ function startTimer (duration, display) {
 //     // hide the link
 //     btn.style.display = 'none';
 // }
-
-// array of object for question
-// quiz object to hold: questions, and possible answers (options)
-// var questions = [
-//     {
-//     question: "test",
-//     options: ["op1", "op2", "op3", "op4"],
-//     answer: "op2"
-//     },
-//     {
-//     question: "test1",
-//     options: ["op1", "op2", "op3", "op4"],
-//     answer: "op4"
-//     }
-//     ]
 
 // object for correct answers to pull from (as array)
 // object for incorrect answers to pull from (as array)
