@@ -21,7 +21,7 @@ body {
 }
 
 #start-button,
-.nav-item {
+#highscores-button {
   border: 3px solid mistyrose;
 }
 
@@ -30,7 +30,7 @@ body {
   color: black;
 }
 
-#nav-item:hover {
+#highscores-button:hover {
   background: mintcream;
   color: black;
 }
