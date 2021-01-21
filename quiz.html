@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timed Code Quiz</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Added bootstrap source code -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
+    <!-- Navbar to go to highscores -->
+<body>
+    <ul class="nav nav-pills">
+        <li class="nav-item" id="highscores-button">
+          <a class="nav-link active" aria-current="page" href="highscores.html">View Highscores</a>
+        </li>
+    </ul>
+
+        <!-- Added timer -->
+        <div class="clock">Time left: <span id="time">01:00</span></div>
     <!-- Container for question elements with options -->
     <div class="container">
         <section id="quiz-box" class="justify-center flex-column">
