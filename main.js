@@ -38,9 +38,6 @@ var questionCards = [
 // startButton.addEventListener('click', startTimer);
 
 // function for moving along carousel (to question boxes)
-function  () {
-
-}
 
 
 startButton.addEventListener('click', function () {
