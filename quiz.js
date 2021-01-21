@@ -1,3 +1,7 @@
+// declare
+var question = document.querySelector('.quest-text')
+
+
 // create function to also start timer countdown upon click event
 function startTimer (duration, display) {
     var timer = duration, minutes, seconds;
