@@ -26,8 +26,9 @@ body {
   margin-top: 100px;
   border: solid #0f6efd 3px;
   border-radius: 6px;
-  padding: 100px;
+  padding: 50px;
   background-color: skyblue;
+  box-shadow: 3px 2px 3px black;
 }
 
 .clock {
