@@ -6,6 +6,30 @@ let currentQuestion = {};
 let correctAmswer = true;
 let score = 0;
 
+// array of object for question set
+// quiz object to hold: questions, and possible answers (options) 
+var questionCards = [
+    {
+    firstQuestion: 'What does the acronym HTML stand for?',
+    answers: ['Helicopter Tilt Makes Laws', 'Hyper Text Makeup Language', 'Hyper Text Markup Language', 'How To Make Latkes'],
+    correctAnswer: 'Hyper Text Markup Language'
+    },
+    {
+    secondQuestion: 'What does the acronym CSS stand for?',
+    answers: ['Cascading Silly String', 'Cascading Style Sheets', 'Cats Scratching Scarves', 'Cascading Style Sleet'],
+    correctAnswer: 'Cascading Style Sheets'
+    },
+    {
+    thirdQuestion: 'What is the syntax for linking our JavaScript (script.js) to our HTML, and where do we place in the HTML code?',
+    answers: ['<script link=script.js></script>, bottom element of the body', '<shrimp src=shrimp.js></>, first element of the body', '<script src=script.js></script>, bottom element of the body', '<script src=main.js></script>, bottom element of the body'],
+    correctAnswer: '<script src=script.js></script>, bottom element of the body'
+    },
+    {
+    fourthQuestion: 'Which of the following uses the proper casing to declare a variable?',
+    answers: ['var codingQuiz', 'var coding-quiz', 'var CodingQuiz', 'var coding Quiz'],
+    correctAnswer: 'var codingQuiz'
+    }
+    ];
 
 // create function to also start timer countdown upon click event
 function startTimer (duration, display) {
