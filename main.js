@@ -1,6 +1,7 @@
 // declare globals
 var startButton = document.getElementById('start-button');
 var startQuiz = document.getElementById('start');
+document.getElementById('questions').style.display = "none";
 // var questBox = document.querySelector('.questionbox');
 
 // var timer = 60 -seconds- (60000 -ms-)
@@ -16,9 +17,8 @@ var startQuiz = document.getElementById('start');
 
 
 startButton.addEventListener('click', function () {
-    // displayNone();
-    // add function to move along carousel
-
+    document.getElementById('questions').style.display = "block";
+    startQuiz.style.display = "none";
     var oneMinute = 60 * 1;
     var display = document.querySelector('#time');
     startTimer(oneMinute, display);
