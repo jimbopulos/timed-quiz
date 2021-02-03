@@ -1,16 +1,18 @@
-// declare
+// Declare global variables
+
 // var question = document.querySelector('.quest-text');
 // var choices = Array.from(document.querySelectorAll('.option'));
 var startButton = document.getElementById('start-button');
 var startQuiz = document.getElementById('start');
 document.getElementById('questions').style.display = "none";
+var timer;
 
 let currentQuestion = 0;
 // let correctAnswer = true;
 let score = 0;
 
 // array of object for question set
-// quiz object to hold: questions, and possible answers (options) 
+// quiz objects to hold: questions, and possible answers (options) 
 var questionCards = [
     {
     question: 'What does the acronym HTML stand for?',
@@ -42,24 +44,50 @@ startButton.addEventListener('click', function () {
     displayQuestion();
 });
 
-
+// hide start button box, display answers
 function displayQuestion() {
+    // hide questions
     document.getElementById('questions').style.display = "block";
     startQuiz.style.display = "none";
+    // clear out previous content
+    document.getElementById("questions").innerHTML = "";
+    // show question based on iteration of questionCards array
     var questionText = document.createElement("h3");
     questionText.textContent = questionCards[currentQuestion].question;
     document.getElementById("questions").appendChild(questionText);
+    // append answers for each question
     for (var i = 0; i < questionCards[currentQuestion].answers.length; i++) {
         var answerText = document.createElement("button");
         answerText.textContent = questionCards[currentQuestion].answers[i];
+        answerText.classList.add("answer");
+        answerText.setAttribute("data-answer", questionCards[currentQuestion].answers[i]);
+        answerText.onclick = checkAnswer;
+        document.getElementById("questions").appendChild(answerText);
     }
 };
 
-
+// check user answers against correct answers
+function checkAnswer() {
+    var userAnswer = this.getAttribute("data-answer");
+    // console.log(userAnswer);
+    // compare with correct answer
+    if (userAnswer === questionCards[currentQuestion].correctAnswer) {
+        score += 10; 
+        currentQuestion++
+        // run function to clear question, display next
+        displayQuestion();
+    // if wrong, time penalty
+    } else {
+        timer = timer - 15;
+        currentQuestion++
+        // run function to clear question, display next
+        displayQuestion();
+    }
+};
 
 // create function to also start timer countdown upon click event
 function startTimer (duration, display) {
-    var timer = duration, minutes, seconds;
+    timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
@@ -96,78 +124,3 @@ function nextQuestion() {
         return 
     } 
 }
-// var questBox = document.querySelector('.questionbox');
-
-// var timer = 60 -seconds- (60000 -ms-)
-// timer--
-// var index = 0
-
-// start button eventListener to hide div element
-// startButton.addEventListener('click', displayNone);
-// start button eventListener to start timer
-// startButton.addEventListener('click', startTimer);
-
-// function for moving along carousel (to question boxes)
-
-// eventListener, click event to hide inital start --> display first question
-// create function to make start-card disappear upon click event
-// function displayNone () {
-//     startCard.style.visibility = 'hidden';
-// }
-
-// handle start
-
-
-// start timer
-// create function to also start timer countdown upon click event
-function startTimer (duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
-}
-
-// window.onload = function () {
-//     var oneMinute = 60 * 1,
-//         display = document.querySelector('#time');
-//     startTimer(oneMinute, display);
-// };
-// when timer runs out, quiz will end
-// user brought to high scores div (prompt)
-// may enter string, local storage saves entry with associated score
-
-// start timer
-
-// function showStuff(id, text, btn) {
-//     document.getElementById(id).style.display = 'block';
-//     // hide the lorem ipsum text
-//     document.getElementById(text).style.display = 'none';
-//     // hide the link
-//     btn.style.display = 'none';
-// }
-
-// object for correct answers to pull from (as array)
-// object for incorrect answers to pull from (as array)
-
-// click event for each option
-// classes for correct, incorrect
-// link data attributes
-
-// if statement for user selected answer (option)
-// if correct, next question
-// if incorrect, next question, decrement time from timer (maybe 10-15 seconds)
-
-// if statement for stop timer. timer = 0 --> end quiz
-
-// user can reset highscores
-// user can take quiz again
