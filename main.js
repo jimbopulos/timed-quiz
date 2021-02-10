@@ -4,7 +4,9 @@
 // var choices = Array.from(document.querySelectorAll('.option'));
 var startButton = document.getElementById('start-button');
 var startQuiz = document.getElementById('start');
+var results = document.getElementById('result');
 document.getElementById('questions').style.display = "none";
+results.style.display = "none";
 
 // timer variables
 var intervalId;
@@ -50,6 +52,8 @@ startButton.addEventListener('click', function () {
 function displayQuestion() {
     // hide questions
     document.getElementById('questions').style.display = "block";
+    // hide results
+    results.style.display = "none";
     startQuiz.style.display = "none";
     // clear out previous content
     document.getElementById("questions").innerHTML = "";
@@ -75,15 +79,15 @@ function checkAnswer() {
     // compare with correct answer
     if (userAnswer === questionCards[currentQuestion].correctAnswer) {
         score += 10; 
-        currentQuestion++
-        // run function to clear question, display next
-        displayQuestion();
+        currentQuestion++;
+        // call function that checks max question
+        checkLastQuestion();
     // if wrong, time penalty
     } else {
         timer = timer - 15;
-        currentQuestion++
-        // run function to clear question, display next
-        displayQuestion();
+        currentQuestion++;
+        // call function that checks max question
+        checkLastQuestion();
     }
 };
 
@@ -100,22 +104,25 @@ function startTimer() {
     }, 1000);
 }
 
-
-// create function to begin quiz
-function startQuiz() {
-    questionCounter = 0;
-    score = 0;
-    availQuestions = [];
-    nextQuestion();
-}
-
 // create function to check if last question displayed
 function checkLastQuestion() {
     if(currentQuestion === questionCards.length) {
-        
+        clearTimeout(intervalId);
+        displayScore();
+    } else {
+        // run function to clear question, display next
+        displayQuestion();
     }
 }
 
+// scoreboard function
+function displayScore() {
+    // hide questions
+    document.getElementById('questions').style.display = "none";
+    // startQuiz.style.display = "none";
+    // show results
+    results.style.display = "block";
+}
 
 
 
