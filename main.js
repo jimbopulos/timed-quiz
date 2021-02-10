@@ -5,7 +5,10 @@
 var startButton = document.getElementById('start-button');
 var startQuiz = document.getElementById('start');
 document.getElementById('questions').style.display = "none";
-var timer;
+
+// timer variables
+var intervalId;
+var timer = 60;
 
 let currentQuestion = 0;
 // let correctAnswer = true;
@@ -38,9 +41,8 @@ var questionCards = [
 
 // replace start button div with first question, so on
 startButton.addEventListener('click', function () {
-    var oneMinute = 60 * 1;
-    var display = document.querySelector('#time');
-    startTimer(oneMinute, display);
+    // start countdown
+    startTimer();
     displayQuestion();
 });
 
@@ -86,28 +88,18 @@ function checkAnswer() {
 };
 
 // create function to also start timer countdown upon click event
-function startTimer (duration, display) {
-    timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration;
+function startTimer() {
+    
+    intervalId = setInterval(function () {
+        timer--;
+        document.querySelector('#time').textContent = timer;
+        if (timer <= 0) {
+            timer = 60;
+            clearTimeout(intervalId);
         }
     }, 1000);
 }
 
-window.onload = function () {
-    var oneMinute = 60 * 1,
-        display = document.querySelector('#time');
-    startTimer(oneMinute, display);
-};
 
 // create function to begin quiz
 function startQuiz() {
@@ -117,10 +109,40 @@ function startQuiz() {
     nextQuestion();
 }
 
-// function for nextQuestion since called
-function nextQuestion() {
-    if (availQuestions.length = 0 || questionCounter > maxQuestions) {
-        localStorage.setItem('prevScore', score);
-        return 
-    } 
+// create function to check if last question displayed
+function checkLastQuestion() {
+    if(currentQuestion === questionCards.length) {
+        
+    }
 }
+
+
+
+
+
+
+// function for nextQuestion since called
+// function nextQuestion() {
+//     if (availQuestions.length = 0 || questionCounter > maxQuestions) {
+//         localStorage.setItem('prevScore', score);
+//         return 
+//     } 
+// }
+
+
+
+// timer = duration, minutes, seconds;
+
+// minutes = parseInt(timer / 60, 10);
+        // seconds = parseInt(timer % 60, 10);
+
+        // minutes = minutes < 10 ? "0" + minutes : minutes;
+        // seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        // display.textContent = minutes + ":" + seconds;
+
+// window.onload = function () {
+    //     var oneMinute = 60 * 1,
+    //         display = document.querySelector('#time');
+    //     startTimer(oneMinute, display);
+    // };
