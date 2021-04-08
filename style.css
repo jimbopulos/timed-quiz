@@ -10,8 +10,9 @@ body {
 }
 
 #start {
-  width: 33%;
+  width: 50%;
   margin: auto;
+  display: block;
   margin-top: 100px;
   border: solid #0f6efd 3px;
   border-radius: 6px;

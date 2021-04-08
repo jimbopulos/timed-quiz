@@ -2,10 +2,10 @@
 
 // var question = document.querySelector('.quest-text');
 // var choices = Array.from(document.querySelectorAll('.option'));
-var startButton = document.getElementById('start-button');
-var startQuiz = document.getElementById('start');
-var results = document.getElementById('result');
-document.getElementById('questions').style.display = "none";
+var startButton = document.getElementById("start-button");
+var startQuiz = document.getElementById("start");
+var results = document.getElementById("result");
+document.getElementById("questions").style.display = "none";
 results.style.display = "none";
 
 var hiscoreBtn = document.getElementById("hiscore-submit");
@@ -19,172 +19,203 @@ let currentQuestion = 0;
 let score = 0;
 
 // array of object for question set
-// quiz objects to hold: questions, and possible answers (options) 
+// quiz objects to hold: questions, and possible answers (options)
 var questionCards = [
-    {
-    question: 'What does the acronym HTML stand for?',
-    answers: ['Helicopter Tilt Makes Laws', 'Hyper Text Makeup Language', 'Hyper Text Markup Language', 'How To Make Latkes'],
-    correctAnswer: 'Hyper Text Markup Language'
-    },
-    {
-    question: 'What does the acronym CSS stand for?',
-    answers: ['Cascading Silly String', 'Cascading Style Sheets', 'Cats Scratching Scarves', 'Cascading Style Sleet'],
-    correctAnswer: 'Cascading Style Sheets'
-    },
-    {
-    question: 'What is the syntax for linking our JavaScript (script.js) to our HTML, and where do we place in the HTML code?',
-    answers: ['<script link=script.js></script>, bottom element of the body', '<shrimp src=shrimp.js></>, first element of the body', '<script src=script.js></script>, bottom element of the body', '<script src=main.js></script>, bottom element of the body'],
-    correctAnswer: '<script src=script.js></script>, bottom element of the body'
-    },
-    {
-    question: 'Which of the following uses the proper casing to declare a variable?',
-    answers: ['var codingQuiz', 'var coding-quiz', 'var CodingQuiz', 'var coding Quiz'],
-    correctAnswer: 'var codingQuiz'
-    }
-    ];
+  {
+    question: "What does the acronym HTML stand for?",
+    answers: [
+      "Helicopter Tilt Makes Laws",
+      "Hyper Text Makeup Language",
+      "Hyper Text Markup Language",
+      "How To Make Latkes",
+    ],
+    correctAnswer: "Hyper Text Markup Language",
+  },
+  {
+    question: "What does the acronym CSS stand for?",
+    answers: [
+      "Cascading Silly String",
+      "Cascading Style Sheets",
+      "Cats Scratching Scarves",
+      "Cascading Style Sleet",
+    ],
+    correctAnswer: "Cascading Style Sheets",
+  },
+  {
+    question:
+      "What is the syntax for linking our JavaScript (script.js) to our HTML, and where do we place in the HTML code?",
+    answers: [
+      "<script link=script.js></script>, bottom element of the body",
+      "<shrimp src=shrimp.js></>, first element of the body",
+      "<script src=script.js></script>, bottom element of the body",
+      "<script src=main.js></script>, bottom element of the body",
+    ],
+    correctAnswer:
+      "<script src=script.js></script>, bottom element of the body",
+  },
+  {
+    question:
+      "Which of the following uses the proper casing to declare a variable?",
+    answers: [
+      "var codingQuiz",
+      "var coding-quiz",
+      "var CodingQuiz",
+      "var coding Quiz",
+    ],
+    correctAnswer: "var codingQuiz",
+  },
+];
 
 // replace start button div with first question, so on
-startButton.addEventListener('click', function () {
-    // start countdown
-    startTimer();
-    displayQuestion();
+startButton.addEventListener("click", function () {
+  // start countdown
+  startTimer();
+  displayQuestion();
 });
 
 // hide start button box, display answers
 function displayQuestion() {
-    // hide questions
-    document.getElementById('questions').style.display = "block";
-    // hide results
-    results.style.display = "none";
-    startQuiz.style.display = "none";
-    // clear out previous content
-    document.getElementById("questions").innerHTML = "";
-    // show question based on iteration of questionCards array
-    var questionText = document.createElement("h3");
-    questionText.textContent = questionCards[currentQuestion].question;
-    document.getElementById("questions").appendChild(questionText);
-    // append answers for each question
-    for (var i = 0; i < questionCards[currentQuestion].answers.length; i++) {
-        var answerText = document.createElement("button");
-        answerText.textContent = questionCards[currentQuestion].answers[i];
-        answerText.classList.add("answer");
-        answerText.setAttribute("data-answer", questionCards[currentQuestion].answers[i]);
-        answerText.onclick = checkAnswer;
-        document.getElementById("questions").appendChild(answerText);
-    }
-};
+  // hide questions
+  document.getElementById("questions").style.display = "block";
+  // hide results
+  results.style.display = "none";
+  startQuiz.style.display = "none";
+  // clear out previous content
+  document.getElementById("questions").innerHTML = "";
+  // show question based on iteration of questionCards array
+  var questionText = document.createElement("h3");
+  questionText.textContent = questionCards[currentQuestion].question;
+  document.getElementById("questions").appendChild(questionText);
+  // append answers for each question
+  for (var i = 0; i < questionCards[currentQuestion].answers.length; i++) {
+    var answerText = document.createElement("button");
+    answerText.textContent = questionCards[currentQuestion].answers[i];
+    answerText.classList.add("answer");
+    answerText.setAttribute(
+      "data-answer",
+      questionCards[currentQuestion].answers[i]
+    );
+    answerText.onclick = checkAnswer;
+    document.getElementById("questions").appendChild(answerText);
+  }
+
+  //   var audio = document.createElement("audio");
+  //   audio.setAttribute("id", "wrong");
+  //   var wrongNoise = document.createElement("source");
+  //   wrongNoise.setAttribute("type", "audio/wav");
+  //   wrongNoise.setAttribute("src", "audio/mixkit-wrong-answer.wav");
+  //   audio.appendChild(wrongNoise);
+  //   document.getElementById("questions").appendChild(audio);
+}
 
 // check user answers against correct answers
 function checkAnswer() {
-    var userAnswer = this.getAttribute("data-answer");
-    // console.log(userAnswer);
-    // compare with correct answer
-    if (userAnswer === questionCards[currentQuestion].correctAnswer) {
-        score += 10; 
-        currentQuestion++;
-        // call function that checks max question
-        checkLastQuestion();
+  var userAnswer = this.getAttribute("data-answer");
+  // console.log(userAnswer);
+  // compare with correct answer
+  if (userAnswer === questionCards[currentQuestion].correctAnswer) {
+    score += 10;
+    currentQuestion++;
+    // call function that checks max question
+    checkLastQuestion();
     // if wrong, time penalty
-    } else {
-        timer = timer - 15;
-        currentQuestion++;
-        // call function that checks max question
-        checkLastQuestion();
-    }
-};
+  } else {
+    var wrongSnd = new Audio("./audio/mixkit-wrong-answer.wav");
+    wrongSnd.play();
+    userAnswer;
+    timer = timer - 15;
+    currentQuestion++;
+    // call function that checks max question
+    checkLastQuestion();
+  }
+}
 
 // create function to also start timer countdown upon click event
 function startTimer() {
-    
-    intervalId = setInterval(function () {
-        timer--;
-        document.querySelector('#time').textContent = timer;
-        if (timer <= 0) {
-            timer = 60;
-            clearTimeout(intervalId);
-        }
-    }, 1000);
+  intervalId = setInterval(function () {
+    timer--;
+    document.querySelector("#time").textContent = timer;
+    if (timer <= 0) {
+      timer = 60;
+      clearTimeout(intervalId);
+    }
+  }, 1000);
 }
 
 // create function to check if last question displayed
 function checkLastQuestion() {
-    if(currentQuestion === questionCards.length) {
-        clearTimeout(intervalId);
-        displayScore();
-    } else {
-        // run function to clear question, display next
-        displayQuestion();
-    }
+  if (currentQuestion === questionCards.length) {
+    clearTimeout(intervalId);
+    displayScore();
+  } else {
+    // run function to clear question, display next
+    displayQuestion();
+  }
 }
 
 // scoreboard function
 function displayScore() {
-    // hide questions
-    document.getElementById('questions').style.display = "none";
-    // startQuiz.style.display = "none";
-    // show results
-    results.style.display = "block";
-    displayData();
+  // hide questions
+  document.getElementById("questions").style.display = "none";
+  // startQuiz.style.display = "none";
+  // show results
+  results.style.display = "block";
+  displayData();
 }
 
-document.getElementById("hiscore-submit").addEventListener("click", function(){
+document
+  .getElementById("hiscore-submit")
+  .addEventListener("click", function () {
     console.log("Inside submit");
     var initial = document.getElementById("initials").value;
     document.getElementById("initials").value = "";
     var temp = JSON.parse(localStorage.getItem("userData")) || [];
     temp.push({
-        initial: initial,
-        score:score
-    })
+      initial: initial,
+      score: score,
+    });
     localStorage.setItem("userData", JSON.stringify(temp));
     displayData();
-})
+  });
 
-function displayData(){
-    document.getElementById("user-list").textContent = "";
-    var temp = JSON.parse(localStorage.getItem("userData")) || [];
-    for(var i=0;i<temp.length;i++){
-        var li = document.createElement("li");
-        li.textContent = temp[i].initial +": "+temp[i].score;
-        document.getElementById("user-list").appendChild(li);
-    }
-
+function displayData() {
+  document.getElementById("user-list").textContent = "";
+  var temp = JSON.parse(localStorage.getItem("userData")) || [];
+  for (var i = 0; i < temp.length; i++) {
+    var li = document.createElement("li");
+    li.textContent = temp[i].initial + ": " + temp[i].score;
+    document.getElementById("user-list").appendChild(li);
+  }
 }
 
-document.getElementById("high-score").addEventListener("click", function(){
-    startQuiz.style.display = "none";
-    displayScore();
-    displayData();
-})
+document.getElementById("high-score").addEventListener("click", function () {
+  startQuiz.style.display = "none";
+  displayScore();
+  displayData();
+});
 
 //displayData();
-
-
-
-
 
 // function for nextQuestion since called
 // function nextQuestion() {
 //     if (availQuestions.length = 0 || questionCounter > maxQuestions) {
 //         localStorage.setItem('prevScore', score);
-//         return 
-//     } 
+//         return
+//     }
 // }
-
-
 
 // timer = duration, minutes, seconds;
 
 // minutes = parseInt(timer / 60, 10);
-        // seconds = parseInt(timer % 60, 10);
+// seconds = parseInt(timer % 60, 10);
 
-        // minutes = minutes < 10 ? "0" + minutes : minutes;
-        // seconds = seconds < 10 ? "0" + seconds : seconds;
+// minutes = minutes < 10 ? "0" + minutes : minutes;
+// seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        // display.textContent = minutes + ":" + seconds;
+// display.textContent = minutes + ":" + seconds;
 
 // window.onload = function () {
-    //     var oneMinute = 60 * 1,
-    //         display = document.querySelector('#time');
-    //     startTimer(oneMinute, display);
-    // };
+//     var oneMinute = 60 * 1,
+//         display = document.querySelector('#time');
+//     startTimer(oneMinute, display);
+// };
