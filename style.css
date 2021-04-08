@@ -12,25 +12,40 @@ body {
 .wrapper {
   display: flex;
   justify-content: center;
-  width: 70%;
+  margin-left: 4%;
+  /* margin-right: 2%; */
 }
 
-#start {
+#start,
+#result {
+  width: 90%;
+  text-align: center;
   margin-top: 7%;
   border: solid #0f6efd 3px;
   border-radius: 6px;
-  padding: 5%;
+  padding: 7%;
   background-color: skyblue;
   box-shadow: 3px 2px 3px black;
 }
 
+a {
+  display: flex;
+  align-self: flex-start;
+}
+
+a:hover {
+  color: mistyrose;
+}
+
 #start-button,
-#high-score {
+#high-score,
+#hiscore-submit {
   border: 3px solid mistyrose;
 }
 
 #start-button:hover,
-#high-score:hover {
+#high-score:hover,
+#hiscore-submit:hover {
   background: mintcream;
   color: black;
 }
@@ -38,6 +53,15 @@ body {
 #high-score {
   margin-top: 0.5em;
   margin-left: 0.5em;
+}
+
+#initials {
+  width: 60%;
+}
+
+.score-input {
+  display: flex;
+  justify-content: center;
 }
 
 #quiz-box {

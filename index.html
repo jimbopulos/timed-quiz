@@ -22,35 +22,38 @@
     <!-- Added timer -->
     <div class="clock">Time left: <span id="time">60</span></div>
 
-    <!-- Div with id=start -->
-    <!-- start button/intro text -->
-    <div class="wrapper container-fluid">
-      <div id="start">
-        <h3>Coding Quiz</h3>
-        <h4>Click the start button to begin...</h4>
-        <br />
-        <button class="btn btn-primary" id="start-button">START</button>
-      </div>
-    </div>
-    <!-- questions section  -->
-    <div id="questions"></div>
-    <!-- results section -->
-    <div id="result">
-      <input
-        id="initials"
-        class="form-control me-2"
-        type="text"
-        placeholder="Enter your highscore"
-        aria-label="submit"
-      />
-      <button id="hiscore-submit" class="btn btn-outline-success" type="submit">
-        Submit
-      </button>
-      <!-- <input type="text" id="initials" />
+    <div class="row wrapper">
+      <div class="col-md-6 col-sm-12">
+        <!-- Div with id=start -->
+        <!-- start button/intro text -->
+        <div id="start">
+          <h3>Coding Quiz</h3>
+          <h4>Click the start button to begin...</h4>
+          <br />
+          <button class="btn btn-primary" id="start-button">START</button>
+        </div>
+        <!-- questions section  -->
+        <div id="questions"></div>
+        <!-- results section -->
+        <div id="result">
+          <ul id="user-list"></ul>
+          <div class="score-input d-flex">
+            <input
+              id="initials"
+              class="form-control me-2"
+              type="text"
+              placeholder="Enter highscore"
+              aria-label="submit"
+            />
+            <button id="hiscore-submit" class="btn btn-primary" type="submit">
+              Submit
+            </button>
+          </div>
+          <!-- <input type="text" id="initials" />
       <button type="submit" id="hiscore-submit">Submit</button> -->
-
-      <ul id="user-list"></ul>
-      <a href="index.html">Home</a>
+          <a href="index.html">Home</a>
+        </div>
+      </div>
     </div>
     <!-- Linked html to js -->
     <script src="main.js"></script>
