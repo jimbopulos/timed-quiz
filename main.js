@@ -90,7 +90,8 @@ function displayQuestion() {
   for (var i = 0; i < questionCards[currentQuestion].answers.length; i++) {
     var answerText = document.createElement("button");
     answerText.textContent = questionCards[currentQuestion].answers[i];
-    answerText.classList.add("answer");
+    answerText.classList.add("btn", "btn-primary");
+    answerText.setAttribute("id", "answer");
     answerText.setAttribute(
       "data-answer",
       questionCards[currentQuestion].answers[i]
