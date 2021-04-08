@@ -188,3 +188,8 @@ document.getElementById("high-score").addEventListener("click", function () {
   displayScore();
   displayData();
 });
+
+document.getElementById("clear").addEventListener("click", function () {
+  localStorage.clear();
+  document.getElementById("user-list").innerHTML = "";
+});

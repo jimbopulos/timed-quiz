@@ -1,13 +1,74 @@
 # Coding Quiz - A timed code quiz for your enjoyment
 
-It was our goal to create a coding quiz in which users could test their programming knowledge in an interactive way. Upon the page loading, users are greeted with a window displaying a START button, that they may then click to begin their quiz.
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
-Starting the quiz also sets off a timer, which will count down over the course of one minute as the user completes their questions. However, if the quiz taker selects an incorrect answer, time will be deducted from the count down, thus making it more difficult for the user to finish all of the questions.
+## Description
 
-After they complete the quiz, users will be prompted with a Highscores window in which they may enter a name to the scoreboard containing their relative score. If a user would like to check the Highscores leaderboard, they can do so via the 'View Highscores' button located in the top left corner of the page. The scoreboard remembers previous scores, and provides an option to clear the leaderboard to make room for newer highscores.
+Test your programming knowledge with this short and fun quiz!
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [Deployed URL](#deployed-url)
+- [License](#license)
+
+## Installation
+
+Navigate the [deployed URL](#deployed-url) to begin using this app.
+
+## Usage
+
+1. To begin, click the `START` button
+
+2. Answer each of four questions:
+
+- Correct answers will invoke a correct answer noise and add 15 points to your total score, with no time penalty
+- Incorrect answers will invoke an incorrect answer noise, no points, and result in a penalty of 15 seconds from the countdown timer
+
+3. After you finish, get your initials on the leader board by typing, then clicking `Submit`
+
+- To view the high scores leaderboard, click the `View Highscores` button in the upper left hand corner of the page.
 
 ![Screenshot of code-quiz intial page with START button and timer.](images/Start-quiz.png)
 
 ![Screenshot of code-quiz first question page with options and timer begin](images/Code-quiz.png)
 
+## Deployed URL
+
 **Test your knowledge [here!](https://jimbopulos.github.io/timed-quiz/)**
+
+## Technologies
+
+- `HTML`
+- `CSS` and `Bootstrap`
+- `JavaScript`
+
+## Questions
+
+If you have any questions, please contact jimbopulos at james.mgalantino@gmail.com
+
+## License
+
+MIT License
+
+Copyright (c) 2021 James Galantino
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
