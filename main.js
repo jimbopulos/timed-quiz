@@ -103,7 +103,6 @@ function displayQuestion() {
 // check user answers against correct answers
 function checkAnswer() {
   var userAnswer = this.getAttribute("data-answer");
-  // console.log(userAnswer);
   // compare with correct answer
   if (userAnswer === questionCards[currentQuestion].correctAnswer) {
     var rightSnd = new Audio("./audio/soundsilk-Correct-Answer.mp3");
@@ -132,6 +131,7 @@ function startTimer() {
     if (timer <= 0) {
       timer = 60;
       clearTimeout(intervalId);
+      displayScore();
     }
   }, 1000);
 }
@@ -187,29 +187,3 @@ document.getElementById("high-score").addEventListener("click", function () {
   displayScore();
   displayData();
 });
-
-//displayData();
-
-// function for nextQuestion since called
-// function nextQuestion() {
-//     if (availQuestions.length = 0 || questionCounter > maxQuestions) {
-//         localStorage.setItem('prevScore', score);
-//         return
-//     }
-// }
-
-// timer = duration, minutes, seconds;
-
-// minutes = parseInt(timer / 60, 10);
-// seconds = parseInt(timer % 60, 10);
-
-// minutes = minutes < 10 ? "0" + minutes : minutes;
-// seconds = seconds < 10 ? "0" + seconds : seconds;
-
-// display.textContent = minutes + ":" + seconds;
-
-// window.onload = function () {
-//     var oneMinute = 60 * 1,
-//         display = document.querySelector('#time');
-//     startTimer(oneMinute, display);
-// };
