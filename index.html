@@ -13,13 +13,14 @@
 </head>
 <!-- Navbar to go to highscores -->
 <body>
-    <ul class="nav nav-pills">
+    <!-- <ul class="nav nav-pills">
         <li class="nav-item" id="highscores-button">
           <a class="nav-link active" aria-current="page" href="highscores.html">View Highscores</a>
         </li>
-    </ul>
+    </ul> -->
+    <button id="high-score">View Highscores</button>
         <!-- Added timer -->
-        <div class="clock">Time left: <span id="time">01:00</span></div>
+        <div class="clock">Time left: <span id="time">60</span></div>
     
         <!-- Div with id=start -->
         <!-- start button/intro text -->
@@ -34,7 +35,14 @@
          </div>
         </div>
         <!-- questions section  -->
-      <div id="questions">
+      <div id="questions"></div>
+      <!-- results section -->
+      <div id="result">
+        <input type="text" id="initials">
+        <button id="hiscore-submit">Submit</button>
+
+        <ul id="user-list"></ul>
+        <a href="index.html">Home</a>
       </div>
     <!-- Linked html to js -->
     <script src="main.js"></script>
