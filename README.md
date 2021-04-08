@@ -24,7 +24,7 @@ Navigate the [deployed URL](#deployed-url) to begin using this app.
 
 2. Answer each of four questions:
 
-- Correct answers will invoke a correct answer noise and add 15 points to your total score, with no time penalty
+- Correct answers will invoke a correct answer noise and add 10 points to your total score, with no time penalty
 - Incorrect answers will invoke an incorrect answer noise, no points, and result in a penalty of 15 seconds from the countdown timer
 
 3. After you finish, get your initials on the leaderboard by typing, then clicking `Submit`
