@@ -34,8 +34,20 @@ a {
   margin-top: 8%;
 }
 
-a:hover {
+#clear {
+  color: #0f6efd;
+  text-decoration: underline;
+}
+
+a:hover,
+#clear:hover {
   color: mistyrose;
+}
+
+.hi-buttons {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-between;
 }
 
 #questions {
@@ -96,7 +108,7 @@ a:hover {
   padding: 15px;
 }
 
-.option {
+/* .option {
   background: mintcream;
   border: 3px solid mistyrose;
   border-radius: 5px;
@@ -109,7 +121,7 @@ a:hover {
   color: mintcream;
   background: #0f6efd;
   cursor: pointer;
-}
+} */
 
 .clock {
   margin-top: 3% !important;
