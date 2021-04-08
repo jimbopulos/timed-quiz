@@ -98,14 +98,6 @@ function displayQuestion() {
     answerText.onclick = checkAnswer;
     document.getElementById("questions").appendChild(answerText);
   }
-
-  //   var audio = document.createElement("audio");
-  //   audio.setAttribute("id", "wrong");
-  //   var wrongNoise = document.createElement("source");
-  //   wrongNoise.setAttribute("type", "audio/wav");
-  //   wrongNoise.setAttribute("src", "audio/mixkit-wrong-answer.wav");
-  //   audio.appendChild(wrongNoise);
-  //   document.getElementById("questions").appendChild(audio);
 }
 
 // check user answers against correct answers
@@ -114,11 +106,13 @@ function checkAnswer() {
   // console.log(userAnswer);
   // compare with correct answer
   if (userAnswer === questionCards[currentQuestion].correctAnswer) {
+    var rightSnd = new Audio("./audio/soundsilk-Correct-Answer.mp3");
+    rightSnd.play();
     score += 10;
     currentQuestion++;
     // call function that checks max question
     checkLastQuestion();
-    // if wrong, time penalty
+    // if wrong, time penalty, noise
   } else {
     var wrongSnd = new Audio("./audio/mixkit-wrong-answer.wav");
     wrongSnd.play();
