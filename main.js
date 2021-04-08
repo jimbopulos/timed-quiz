@@ -8,6 +8,8 @@ var results = document.getElementById('result');
 document.getElementById('questions').style.display = "none";
 results.style.display = "none";
 
+var hiscoreBtn = document.getElementById("hiscore-submit");
+
 // timer variables
 var intervalId;
 var timer = 60;
@@ -122,7 +124,40 @@ function displayScore() {
     // startQuiz.style.display = "none";
     // show results
     results.style.display = "block";
+    displayData();
 }
+
+document.getElementById("hiscore-submit").addEventListener("click", function(){
+    console.log("Inside submit");
+    var initial = document.getElementById("initials").value;
+    document.getElementById("initials").value = "";
+    var temp = JSON.parse(localStorage.getItem("userData")) || [];
+    temp.push({
+        initial: initial,
+        score:score
+    })
+    localStorage.setItem("userData", JSON.stringify(temp));
+    displayData();
+})
+
+function displayData(){
+    document.getElementById("user-list").textContent = "";
+    var temp = JSON.parse(localStorage.getItem("userData")) || [];
+    for(var i=0;i<temp.length;i++){
+        var li = document.createElement("li");
+        li.textContent = temp[i].initial +": "+temp[i].score;
+        document.getElementById("user-list").appendChild(li);
+    }
+
+}
+
+document.getElementById("high-score").addEventListener("click", function(){
+    startQuiz.style.display = "none";
+    displayScore();
+    displayData();
+})
+
+//displayData();
 
 
 
