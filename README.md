@@ -27,23 +27,32 @@ Navigate the [deployed URL](#deployed-url) to begin using this app.
 - Correct answers will invoke a correct answer noise and add 15 points to your total score, with no time penalty
 - Incorrect answers will invoke an incorrect answer noise, no points, and result in a penalty of 15 seconds from the countdown timer
 
-3. After you finish, get your initials on the leader board by typing, then clicking `Submit`
+3. After you finish, get your initials on the leaderboard by typing, then clicking `Submit`
 
 - To view the high scores leaderboard, click the `View Highscores` button in the upper left hand corner of the page.
+- The highscores leaderboard may be cleared by clicking `Clear highscores`
 
-![Screenshot of code-quiz intial page with START button and timer.](images/Start-quiz.png)
+> Quiz START
 
-![Screenshot of code-quiz first question page with options and timer begin](images/Code-quiz.png)
+![Quiz start page](images/timed-quiz-start.png)
 
-## Deployed URL
+> Questions
 
-**Test your knowledge [here!](https://jimbopulos.github.io/timed-quiz/)**
+![Quiz questions](images/timed-quiz-question.png)
+
+> Highscores
+
+![Quiz highscores page](images/timed-quiz-hiscores.png)
 
 ## Technologies
 
 - `HTML`
 - `CSS` and `Bootstrap`
 - `JavaScript`
+
+## Deployed URL
+
+**Test your knowledge [here!](https://jimbopulos.github.io/timed-quiz/)**
 
 ## Questions
 
