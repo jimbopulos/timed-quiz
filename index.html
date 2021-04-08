@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Gave page a proper title -->
     <title>Timed Code Quiz Start</title>
 
     <!-- Added bootstrap source code -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
     <!-- Linked html to css -->
-    <link rel='stylesheet' href='style.css'>
-</head>
-<!-- Navbar to go to highscores -->
-<body>
-    <!-- <ul class="nav nav-pills">
-        <li class="nav-item" id="highscores-button">
-          <a class="nav-link active" aria-current="page" href="highscores.html">View Highscores</a>
-        </li>
-    </ul> -->
-    <button id="high-score">View Highscores</button>
-        <!-- Added timer -->
-        <div class="clock">Time left: <span id="time">60</span></div>
-    
-        <!-- Div with id=start -->
-        <!-- start button/intro text -->
-        <div class="wrapper" id="start">
-            <h3>Coding Quiz</h3>
-            <h4>Click the start button to begin...</h4>
-            <br>
-              <div class="start-box" aria-role="start-text" aria-label="carousel">
-                <button class="btn btn-primary" id="start-button">START</button>
-              </div> 
-            </div>
-         </div>
-        </div>
-        <!-- questions section  -->
-      <div id="questions"></div>
-      <!-- results section -->
-      <div id="result">
-        <input type="text" id="initials">
-        <button id="hiscore-submit">Submit</button>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!-- Navbar to go to highscores -->
+  <body>
+    <button id="high-score" class="btn btn-primary">View Highscores</button>
+    <!-- Added timer -->
+    <div class="clock">Time left: <span id="time">60</span></div>
 
-        <ul id="user-list"></ul>
-        <a href="index.html">Home</a>
+    <!-- Div with id=start -->
+    <!-- start button/intro text -->
+    <div class="wrapper container-fluid">
+      <div id="start">
+        <h3>Coding Quiz</h3>
+        <h4>Click the start button to begin...</h4>
+        <br />
+        <button class="btn btn-primary" id="start-button">START</button>
       </div>
+    </div>
+    <!-- questions section  -->
+    <div id="questions"></div>
+    <!-- results section -->
+    <div id="result">
+      <input
+        id="initials"
+        class="form-control me-2"
+        type="text"
+        placeholder="Enter your highscore"
+        aria-label="submit"
+      />
+      <button id="hiscore-submit" class="btn btn-outline-success" type="submit">
+        Submit
+      </button>
+      <!-- <input type="text" id="initials" />
+      <button type="submit" id="hiscore-submit">Submit</button> -->
+
+      <ul id="user-list"></ul>
+      <a href="index.html">Home</a>
+    </div>
     <!-- Linked html to js -->
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

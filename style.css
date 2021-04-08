@@ -9,26 +9,35 @@ body {
   background-attachment: fixed;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+
 #start {
-  width: 50%;
-  margin: auto;
-  display: block;
-  margin-top: 100px;
+  margin-top: 7%;
   border: solid #0f6efd 3px;
   border-radius: 6px;
-  padding: 3%;
+  padding: 5%;
   background-color: skyblue;
   box-shadow: 3px 2px 3px black;
 }
 
 #start-button,
-#highscores-button {
+#high-score {
   border: 3px solid mistyrose;
 }
 
-#start-button:hover {
+#start-button:hover,
+#high-score:hover {
   background: mintcream;
   color: black;
+}
+
+#high-score {
+  margin-top: 0.5em;
+  margin-left: 0.5em;
 }
 
 #quiz-box {
@@ -64,13 +73,13 @@ body {
 }
 
 .clock {
+  margin-top: 3% !important;
   background-color: #0f6efd;
   color: white;
   border-radius: 6px;
-  padding: 3px;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 6px;
   margin: 0 auto;
-  width: 8%;
+  width: 10em;
   text-align: center;
 }
 
